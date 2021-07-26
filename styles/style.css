@@ -134,4 +134,7 @@ nav{
     .hov-nav{
         font-size: 4vh;
     }
+    .nav-links{
+        margin-right: 0px;
+    }
 }
