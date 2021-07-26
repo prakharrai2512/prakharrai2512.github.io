@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    width:100%;
+    height: 10vh;
+    border-bottom-width: 0.5vh;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    overflow: hidden;
+}
+.landing{
+    height: 90vh;
+}
+.nav-links{
+    display: flex;
+    list-style:none;
+    width: 40%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+.nav-links li .hov-nav{
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    color: black;
+}
+#hero{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 4.5vw;
+    
+    font-family: 'Poppins', sans-serif;
+}
+#sidekick{
+    padding-top: 20vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+}
+#homeico{
+    display: inline;
+    vertical-align: middle;
+}
+@media  screen and (max-width:900px) {
+    .line{
+        width: 3.5vh;
+        height: 0.65vw;
+        background-color: black;
+        margin: 0.95vh;
+    }
+    nav{
+        position: relative;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%,-50%);
+        z-index: 2;
+    }
+    .nav-links{
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        background-color: white;
+        clip-path: circle(10px at 90% -10%);
+        -webkit-clip-path: circle(10px at 90% -10%);
+        transition: all 1s ease-out;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+    }
+    
+}
