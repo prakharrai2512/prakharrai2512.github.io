@@ -28,7 +28,6 @@ nav{
     justify-content: space-around;
     align-items: center;
     margin-left: auto;
-    margin-right: 20px;
 }
 .hov-nav{
     text-decoration: none;
@@ -119,7 +118,6 @@ nav{
         clip-path: circle(10px at 90% -10%);
         -webkit-clip-path: circle(10px at 90% -10%);
         transition: all 1s ease-out;
-        margin-right: 0px;
     }
     .nav-links.open{
         clip-path: circle(1000px at 90% -10%);
