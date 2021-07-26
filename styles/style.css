@@ -14,6 +14,8 @@ nav{
     border-bottom-color: black;
     border-bottom-style: solid;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 .landing{
     height: 90vh;
@@ -21,16 +23,16 @@ nav{
 .nav-links{
     display: flex;
     list-style:none;
-    width: 40%;
     height: 100%;
     justify-content: space-around;
     align-items: center;
     margin-left: auto;
+    margin-right: 20px;
 }
-.nav-links li .hov-nav{
+.hov-nav{
     text-decoration: none;
-    font-size: 16px;
-    padding: 8px;
+    font-size: 20px;
+    padding: 10px;
     color: black;
 }
 #hero{
@@ -50,8 +52,42 @@ nav{
     font-family: 'Poppins', sans-serif;
 }
 #homeico{
-    display: inline;
-    vertical-align: middle;
+    margin-left: 2vw;
+    font-size: 20px;
+    color: black;
+}
+#lmks{
+    width: 80%;
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2vw;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+}
+.cursor {
+    display: flex;
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.cursor span {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.gmail{
+    background-color: #feecea;
+}
+.github{
+    background-color: #d8d8d8;
+}
+.linkedin{
+    background-color: #e0eeffc9;
 }
 @media  screen and (max-width:900px) {
     .line{
@@ -73,6 +109,8 @@ nav{
     }
     .nav-links{
         position: fixed;
+        right: 0%;
+        top: 0%;
         height: 100vh;
         width: 100vw;
         flex-direction: column;
@@ -85,5 +123,14 @@ nav{
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
     }
-    
+    .landing{
+        height: 60vh;
+    }
+    #lmks{
+        margin-top:15%;
+        
+    }
+    .hov-nav{
+        font-size: 4vh;
+    }
 }
