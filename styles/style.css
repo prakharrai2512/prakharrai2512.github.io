@@ -34,6 +34,7 @@ nav{
     align-items: center;
     margin-left: auto;
     padding-right: 20px;
+    z-index: 3;
 }
 .hov-nav{
     text-decoration: none;
@@ -129,7 +130,7 @@ canvas {
         right: 5%;
         top: 50%;
         transform: translate(-5%,-50%);
-        z-index: 2;
+        z-index: 3;
     }
     .nav-links{
         position: fixed;
