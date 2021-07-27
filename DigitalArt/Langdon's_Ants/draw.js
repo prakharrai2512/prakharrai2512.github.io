@@ -10,35 +10,32 @@ let ant_x;
 let ant_y;
 let ant_o;
 function setup(){
-    createCanvas(displayWidth,displayHeight)
-    h=25;
-    coln=floor(displayWidth/h);
-    rown=floor(displayHeight/h);
-    board=new Array(rown);
-    for(let i=0; i<rown; i++){
-        board[i]= new Array(coln);
-    }
-    next = new Array(rown);
-    for (let i = 0; i < rown; i++) {
-    next[i] = new Array(coln);
+    createCanvas(windowWidth,windowHeight);
+    h=30;
+    coln=floor(width/h);
+    rown=floor(height/h);
+    console.log(coln,rown);
+    board=new Array(coln);
+    for(let i=0; i<coln; i++){
+        board[i]= new Array(rown);
     }
     tram = ceil(random(5)) + 1;
     console.log(tram);
     ant_x = floor(random(coln));
     ant_y = floor(random(rown));
     ant_o = floor(random(4));
-    frameRate(90);
-    strokeWeight(0.2);
+    frameRate(180);
+    strokeWeight(0);
     init();
 }
 function draw(){
     background(255);
-    for ( let i = 0; i < rown;i++) {
-    for ( let j = 0; j < coln;j++) {
+    for ( let i = 0; i < coln;i++) {
+    for ( let j = 0; j < rown;j++) {
       let colr = clist[board[i][j]];
       fill(colr);
       stroke(0);
-      rect(j * h, i * h, h-1, h-1);
+      rect(i * h,j * h, h-0.5, h-0.5);
     }
     }
     update();
@@ -52,8 +49,9 @@ function init(){
         clist[i] = randClr();
         prlist[i] = floor(random(2));
     }
-    for(let i=0; i<rown; i++){
-        for(let j=0; j<coln; j++){
+    for(let i=0; i<coln; i++){
+        for(let j=0; j<rown; j++){
+            console.log(i,j);
             board[i][j] = 0;
         }
     }
@@ -81,14 +79,14 @@ function antmove(x,y){
 }
 
 function update(){
-let k = board[ant_y][ant_x];
+let k = board[ant_x][ant_y];
 if(k==(tram-1)){
     k=0;
 }
 else{
     k=k+1;
 }
-board[ant_y][ant_x] = k;
+board[ant_x][ant_y] = k;
 let mv = prlist[k];
 if(ant_o == 0){
     if(mv == 0){
