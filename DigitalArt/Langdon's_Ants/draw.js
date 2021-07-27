@@ -19,7 +19,7 @@ function setup(){
     for(let i=0; i<coln; i++){
         board[i]= new Array(rown);
     }
-    tram = ceil(random(5)) + 1;
+    tram = ceil(random(10)) + 1;
     console.log(tram);
     ant_x = floor(random(coln));
     ant_y = floor(random(rown));
@@ -51,7 +51,7 @@ function init(){
     }
     for(let i=0; i<coln; i++){
         for(let j=0; j<rown; j++){
-            console.log(i,j);
+            //console.log(i,j);
             board[i][j] = 0;
         }
     }
