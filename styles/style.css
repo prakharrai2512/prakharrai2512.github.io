@@ -130,8 +130,9 @@ canvas {
         right: 5%;
         top: 50%;
         transform: translate(-5%,-50%);
-        z-index: 3;
+        z-index: 4;
     }
+    
     .nav-links{
         position: fixed;
         right: 0%;
