@@ -13,7 +13,7 @@ function setup(){
     let myCanvas = createCanvas(windowWidth,windowHeight);
     myCanvas.parent('backCont');
     console.log(myCanvas);
-    h=30;
+    h=100;
     coln=floor(width/h);
     rown=floor(height/h);
     console.log(coln,rown);
