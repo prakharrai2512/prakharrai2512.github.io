@@ -5,8 +5,14 @@
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+}
+#abtunder{
+    display: inline;
+    border-bottom-style: solid;
+    border-color: white;
+    border-bottom-width: 0.5vh;
 }
 nav{
     width:100%;
@@ -122,7 +128,34 @@ canvas {
 .land1{
     height: 90vh;
     width:100vw;
+    background-color: rgb(255, 255, 255);
+}
+#borderbox{
+    text-align: center;
+    padding-top:10vh;
+    padding-bottom: 10vh;
+}
+.land2{
+    color:white;
+    width:100vw;
     background-color: rgb(29, 29, 29);
+    border-bottom-color:whitesmoke ;
+    border-bottom-width:1vh ;
+    border-bottom-style: solid;
+}
+#abt{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    color: white;
+    padding-bottom: 8vh;
+}
+#abtme{
+    text-align: center;
+    display: inline-block;
+    width:80%;
+    position: relative;
+    color: white;
 }
 #digA{
     padding-top: 2vh;
@@ -132,10 +165,16 @@ canvas {
     margin-right: auto;
     font-size: 4.5vw;
     font-weight: bold;
-    color: white;
+    color: black;
     font-family: 'Poppins', sans-serif;
 }
 @media  screen and (max-width:900px) {
+    #abt{
+        width: 100%;  
+    }
+    #abtme{
+        width:100%;
+    }
     .line{
         width: 3.5vh;
         height: 0.65vw;
