@@ -29,6 +29,19 @@ function setup(){
     init();
 }
 
+function draw(){
+    background(255);
+    for ( let i = 0; i < coln;i++) {
+    for ( let j = 0; j < rown;j++) {
+      let colr = clist[board[i][j]];
+      fill(colr);
+      stroke(0);
+      rect(i * h,j * h, h-0.5, h-0.5);
+    }
+    }
+    update();
+}
+
 function init(){
     clist = new Array(tram);
     prlist = new Array(tram);
