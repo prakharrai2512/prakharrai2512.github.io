@@ -1,8 +1,7 @@
-var slides = document.querySelectorAll('.slide');
+    var slides = document.querySelectorAll('.slide');
     var btns = document.querySelectorAll('.btn');
     let currentSlide = 1;
 
-    // Javascript for image slider manual navigation
     var manualNav = function(manual){
       slides.forEach((slide) => {
         slide.classList.remove('active');
@@ -23,7 +22,6 @@ var slides = document.querySelectorAll('.slide');
       });
     });
 
-    // Javascript for image slider autoplay navigation
     var repeat = function(activeClass){
       let active = document.getElementsByClassName('active');
       let i = 1;
