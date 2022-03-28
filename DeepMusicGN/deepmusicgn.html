@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.1/dist/tf.min.js"></script>
+		<script src="./musical.js"></script>
+    </head> 
+    <body style="font-family:Arial;padding:36px 20%;">
+		<h1>LSTM based piano score composer with seed input</h1>
+    	<h2>Enter the music seed(12-character: A-Z, a-z, 0-9)<span></span></h2>
+		<span name="span">Player</span>
+		<input type="text" id="reader" name="reader"><br><br>
+  		<input type="submit" onclick="tatake()" value="Generate">
+		<h3>The generated music can be very short ~2 seconds to long >3minutes.</h3>
+		<h3>Not happy with the song for your seed generate again for a slightly different variation or try a new seed</h3>
+		<div style="text-align: center;">
+			<a style="margin-right: 50px; font-weight: bold;color:rgb(56, 124, 212)" href="https://github.com/prakharrai2512/Music-man" target="_blank">Star/follow this project</a>
+			<a style="margin-left: 50px; font-weight: bold; color:rgb(56, 124, 212)" href="https://github.com/prakharrai2512" target="_blank">Explore more of my work</a>
+		</div>
+		<script src="./deepmusicgn.js"></script>
+    </body>
+</html>
+    
+    
