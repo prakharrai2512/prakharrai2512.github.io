@@ -24,7 +24,7 @@ function setup(){
     ant_x = floor(random(coln));
     ant_y = floor(random(rown));
     ant_o = floor(random(4));
-    frameRate(180);
+    frameRate(1800);
     strokeWeight(0);
     init();
 }
@@ -39,6 +39,9 @@ function draw(){
       rect(i * h,j * h, h-0.5, h-0.5);
     }
     }
+    update();
+    update();
+    update();
     update();
 }
 
