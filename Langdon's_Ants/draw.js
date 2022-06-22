@@ -24,7 +24,7 @@ function setup(){
     ant_x = floor(random(coln));
     ant_y = floor(random(rown));
     ant_o = floor(random(4));
-    frameRate(1800);
+    frameRate(1000);
     strokeWeight(0);
     init();
 }
