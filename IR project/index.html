@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Inference</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 600px; margin: auto; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; }
+        #result { margin-top: 20px; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Enter Text for classification into positive financial sentiment or negative</h2>
+        <input type="text" id="inputText" placeholder="Enter text here...">
+        <button onclick="classifyText()">Classify Text</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        async function classifyText() {
+            document.getElementById('result').innerText = 'Error: Failed to get prediction.';
+            const inputText = document.getElementById('inputText').value;
+            const response = await fetch('YOUR_BACKEND_ENDPOINT_URL', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: inputText }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('result').innerText = `Prediction: ${data.prediction}`;
+            } else {
+                document.getElementById('result').innerText = 'Error: Failed to get prediction.';
+            }
+        }
+    </script>
+</body>
+
+</html>
